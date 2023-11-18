@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Midterm</title>
+
+  <!-- External CSS and Font Links -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Accessibility Skip Links -->
+  <a href="#maincontent" class="skip-link">Skip to main content</a>
+  <a href="#navigation" class="skip-link">Skip to navigation</a>
+
+  <!-- Main Wrapper -->
+  <div id="wrapper">
+    <!-- Header Section -->
+    <header class="header">
+      <!-- Navigation Bar -->
+      <div class="header-navigation">
+        <!-- Menu Button for Mobile -->
+        <button aria-label="Main menu" aria-controls="navigation" aria-expanded="false" id="menu-button">
+          <span class="hamburger-icon"></span>
+        </button>
+        <!-- Main Navigation Menu -->
+        <nav id="navigation" class="hidden">
+          <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="pickup.html">Pickup</a></li>
+            <li><a href="locations.html">Locations</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Logo -->
+      <strong class="logo">
+        <a href="/" title="Home">
+          <img src="images/logo.svg" alt="Amelie Cakes" width="99" height="108">
+        </a>
+      </strong>
+      <!-- Contact Links -->
+      <div class="header-contact">
+        <a href="tel:+971525600090" class="phone-link" aria-label="Call us at +971 52 560 0090">+971 52 560 0090</a>
+        <a href="/cart" class="cart-link" aria-label="View your shopping cart">Cart</a>
+      </div>
+    </header>
+
+    <main id="maincontent">
+      <!-- Hero Section -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <h2 id="hero-heading">Our Cakes</h2>
+        <!-- Hero Image with Responsive Sources -->
+        <picture class="full-width">
+          <source srcset="images/amelie-cake-banner-1366x700.jpg" media="(min-width: 768px)">
+          <source srcset="images/amelie-cake-banner-390x526.jpg">
+          <img src="images/amelie-cake-banner-1366x700.jpg" alt="Feature cake image" aria-label="Featured cake">
+        </picture>
+      </section>  
+    
+      <!-- Our Cakes Section -->
+      <section class="our-cakes">
+        <!-- List of Cakes -->
+        <div class="cake-list" role="list">
+          <!-- Individual Cake Item -->
+          <article class="cake-item" itemscope itemtype="http://schema.org/Product" aria-labelledby="cake1-heading">
+            <!-- Link to Cake Detail Page -->
+            <a href="catalog/cake1.html" itemprop="url">
+              <!-- Cake Image with Responsive Sources -->
+              <picture>
+                <source srcset="images/amelie-cake-product1-396x537@2x.jpg, images/amelie-cake-product1-396x537@4x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="images/amelie-cake-product1-163x210@2x.jpg, images/amelie-cake-product1-163x210@4x.jpg 2x">
+                <img src="images/amelie-cake-product1-396x537@2x.jpg" alt="Amelie Mission Cake" itemprop="image">
+              </picture>
+              <!-- Cake Information -->
+              <div class="cake-info">
+                <h3 id="cake1-heading" class="cake-title" itemprop="name">Amelie Mission Cake</h3>
+                <p class="cake-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><b itemprop="price">60</b>$</p>
+              </div>
+            </a>
+          </article>
+          <!-- Individual Cake Item -->
+          <article class="cake-item" itemscope itemtype="http://schema.org/Product" aria-labelledby="cake2-heading">
+            <!-- Link to Cake Detail Page -->
+            <a href="catalog/cake2.html" itemprop="url">
+              <!-- Cake Image with Responsive Sources -->
+              <picture>
+                <source srcset="images/amelie-cake-product2-396x537@2x.jpg, images/amelie-cake-product2-396x537@4x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="images/amelie-cake-product2-163x210@2x.jpg, images/amelie-cake-product2-163x210@4x.jpg 2x">
+                <img src="images/amelie-cake-product2-396x537@2x.jpg" alt="Amelie Mission Cake" itemprop="image">
+              </picture>
+              <!-- Cake Information -->
+              <div class="cake-info">
+                <h3 id="cake2-heading" class="cake-title" itemprop="name">Amelie Mission Cake</h3>
+                <p class="cake-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><b itemprop="price">60</b>$</p>
+              </div>
+            </a>
+          </article>
+          <!-- Individual Cake Item -->
+          <article class="cake-item" itemscope itemtype="http://schema.org/Product" aria-labelledby="cake3-heading">
+            <!-- Link to Cake Detail Page -->
+            <a href="catalog/cake3.html" itemprop="url">
+              <!-- Cake Image with Responsive Sources -->
+              <picture>
+                <source srcset="images/amelie-cake-product3-396x537@2x.jpg, images/amelie-cake-product3-396x537@4x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="images/amelie-cake-product3-163x210@2x.jpg, images/amelie-cake-product3-163x210@4x.jpg 2x">
+                <img src="images/amelie-cake-product3-396x537@2x.jpg" alt="Amelie Mission Cake" itemprop="image">
+              </picture>
+              <!-- Cake Information -->
+              <div class="cake-info">
+                <h3 id="cake3-heading" class="cake-title" itemprop="name">Amelie Mission Cake</h3>
+                <p class="cake-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><b itemprop="price">60</b>$</p>
+              </div>
+            </a>
+          </article>
+          <!-- Individual Cake Item -->
+          <article class="cake-item" itemscope itemtype="http://schema.org/Product" aria-labelledby="cake4-heading">
+            <!-- Link to Cake Detail Page -->
+            <a href="catalog/cake2.html" itemprop="url">
+              <!-- Cake Image with Responsive Sources -->
+              <picture>
+                <source srcset="images/amelie-cake-product2-396x537@2x.jpg, images/amelie-cake-product2-396x537@4x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="images/amelie-cake-product2-163x210@2x.jpg, images/amelie-cake-product2-163x210@4x.jpg 2x">
+                <img src="images/amelie-cake-product2-396x537@2x.jpg" alt="Amelie Mission Cake" itemprop="image">
+              </picture>
+              <!-- Cake Information -->
+              <div class="cake-info">
+                <h3 id="cake4-heading" class="cake-title" itemprop="name">Amelie Mission Cake</h3>
+                <p class="cake-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><b itemprop="price">60</b>$</p>
+              </div>
+            </a>
+          </article>
+          <!-- Individual Cake Item -->
+          <article class="cake-item" itemscope itemtype="http://schema.org/Product" aria-labelledby="cake5-heading">
+            <!-- Link to Cake Detail Page -->
+            <a href="catalog/cake1.html" itemprop="url">
+              <!-- Cake Image with Responsive Sources -->
+              <picture>
+                <source srcset="images/amelie-cake-product1-396x537@2x.jpg, images/amelie-cake-product1-396x537@4x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="images/amelie-cake-product1-163x210@2x.jpg, images/amelie-cake-product1-163x210@4x.jpg 2x">
+                <img src="images/amelie-cake-product1-396x537@2x.jpg" alt="Amelie Mission Cake" itemprop="image">
+              </picture>
+              <!-- Cake Information -->
+              <div class="cake-info">
+                <h3 id="cake5-heading" class="cake-title" itemprop="name">Amelie Mission Cake</h3>
+                <p class="cake-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><b itemprop="price">60</b>$</p>
+              </div>
+            </a>
+          </article>
+          <!-- Individual Cake Item -->
+          <article class="cake-item" itemscope itemtype="http://schema.org/Product" aria-labelledby="cake6-heading">
+            <!-- Link to Cake Detail Page -->
+            <a href="catalog/cake3.html" itemprop="url">
+              <!-- Cake Image with Responsive Sources -->
+              <picture>
+                <source srcset="images/amelie-cake-product3-396x537@2x.jpg, images/amelie-cake-product3-396x537@4x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="images/amelie-cake-product3-163x210@2x.jpg, images/amelie-cake-product3-163x210@4x.jpg 2x">
+                <img src="images/amelie-cake-product3-396x537@2x.jpg" alt="Amelie Mission Cake" itemprop="image">
+              </picture>
+              <!-- Cake Information -->
+              <div class="cake-info">
+                <h3 id="cake6-heading" class="cake-title" itemprop="name">Amelie Mission Cake</h3>
+                <p class="cake-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><b itemprop="price">60</b>$</p>
+              </div>
+            </a>
+          </article>
+          <!-- Individual Cake Item -->
+          <article class="cake-item" itemscope itemtype="http://schema.org/Product" aria-labelledby="cake7-heading">
+            <!-- Link to Cake Detail Page -->
+            <a href="catalog/cake2.html" itemprop="url">
+              <!-- Cake Image with Responsive Sources -->
+              <picture>
+                <source srcset="images/amelie-cake-product2-396x537@2x.jpg, images/amelie-cake-product2-396x537@4x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="images/amelie-cake-product2-163x210@2x.jpg, images/amelie-cake-product2-163x210@4x.jpg 2x">
+                <img src="images/amelie-cake-product2-396x537@2x.jpg" alt="Amelie Mission Cake" itemprop="image">
+              </picture>
+              <!-- Cake Information -->
+              <div class="cake-info">
+                <h3 id="cake7-heading" class="cake-title" itemprop="name">Amelie Mission Cake</h3>
+                <p class="cake-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><b itemprop="price">60</b>$</p>
+              </div>
+            </a>
+          </article>
+          <!-- Individual Cake Item -->
+          <article class="cake-item" itemscope itemtype="http://schema.org/Product" aria-labelledby="cake8-heading">
+            <!-- Link to Cake Detail Page -->
+            <a href="catalog/cake3.html" itemprop="url">
+              <!-- Cake Image with Responsive Sources -->
+              <picture>
+                <source srcset="images/amelie-cake-product3-396x537@2x.jpg, images/amelie-cake-product3-396x537@4x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="images/amelie-cake-product3-163x210@2x.jpg, images/amelie-cake-product3-163x210@4x.jpg 2x">
+                <img src="images/amelie-cake-product3-396x537@2x.jpg" alt="Amelie Mission Cake" itemprop="image">
+              </picture>
+              <!-- Cake Information -->
+              <div class="cake-info">
+                <h3 id="cake8-heading" class="cake-title" itemprop="name">Amelie Mission Cake</h3>
+                <p class="cake-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><b itemprop="price">60</b>$</p>
+              </div>
+            </a>
+          </article>
+          <!-- Individual Cake Item -->
+          <article class="cake-item" itemscope itemtype="http://schema.org/Product" aria-labelledby="cake9-heading">
+            <!-- Link to Cake Detail Page -->
+            <a href="catalog/cake1.html" itemprop="url">
+              <!-- Cake Image with Responsive Sources -->
+              <picture>
+                <source srcset="images/amelie-cake-product1-396x537@2x.jpg, images/amelie-cake-product1-396x537@4x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="images/amelie-cake-product1-163x210@2x.jpg, images/amelie-cake-product1-163x210@4x.jpg 2x">
+                <img src="images/amelie-cake-product1-396x537@2x.jpg" alt="Amelie Mission Cake" itemprop="image">
+              </picture>
+              <!-- Cake Information -->
+              <div class="cake-info">
+                <h3 id="cake9-heading" class="cake-title" itemprop="name">Amelie Mission Cake</h3>
+                <p class="cake-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><b itemprop="price">60</b>$</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer with additional links and information -->
+    <footer class="footer" aria-label="Footer">
+      <!-- Footer Columns for different sections -->
+      <div class="footer-column">
+        <h2 class="footer-heading">Connect</h2>
+        <ul>
+          <li><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h2 class="footer-heading">Get In Touch</h2>
+        <ul>
+          <li><a href="tel:+16137775588">+1613 777 55 88</a></li>
+          <li><a href="mailto:info@amelie.com">info@amelie.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h2 class="footer-heading">Shop</h2>
+        <ul>
+          <li><a href="/delivery">Delivery</a></li>
+          <li><a href="/pickup">Pickup</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h2 class="footer-heading">Amelie Store</h2>
+        <ul>
+          <li><a href="/love">For The Love</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-credits">
+        <!-- Footer Credits and Call to Action -->
+        <picture class="full-width">
+          <source srcset="images/amelie-cake-footer-1366x422.jpg" media="(min-width: 768px)">
+          <source srcset="images/amelie-cake-footer-390x433.jpg">
+          <img src="images/amelie-cake-footer-1366x422.jpg" alt="Feature cake image" aria-label="Featured cake">
+        </picture>
+        <p>Call Now!</p>
+        <a href="#" class="button white-color">Continue Shopping</a>
+        <p class="copyright">&copy; 2023 Amelie.</p>
+      </div>
+    </footer>  
+  </div>
+
+</body>
+</html>
