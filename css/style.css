@@ -1,0 +1,773 @@
+:root {
+  /* Primary color scheme definitions */
+  --primary-color: #6F54A2;
+  --secondary-color: #88D0C4;
+  --text-color: #000000;
+  --text-color-transparent: rgba(0, 0, 0, 0.5);
+  --scrollbar-width: calc(100vw - 100%);
+}
+
+* {
+  /* Universal box-sizing for consistency */
+  box-sizing: border-box;
+}
+
+html {
+  /* Base font size and family */
+  font-size: 16px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+  /* Resetting default margins and padding */
+  margin: 0;
+  padding: 0;
+  /* Base line-height and text color */
+  line-height: 24px;
+  color: var(--text-color);
+}
+
+/* Skip Links for Accessibility */
+.skip-link {
+  /* Absolute positioning to move offscreen until focused */
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  /* Smooth transition for visibility */
+  transition: top 0.3s;
+}
+
+.skip-link:focus,
+.skip-link:active {
+  /* Bringing the skip link into view when focused */
+  top: 10px;
+}
+
+/* Utility class to visually hide elements but keep them screen reader accessible */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+
+/* Main Wrapper */
+#wrapper {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header Styles */
+.header {
+  padding: 36px 0 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 47px;
+}
+
+.header.absolute {
+  /* Absolute positioning for the header */
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  z-index: 5;
+}
+
+/* Logo Styles */
+.logo a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.logo img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Hamburger Menu Button Styles */
+#menu-button {
+  height: 32px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+}
+
+.hamburger-icon {
+  width: 39px;
+  height: 11px;
+  /* Using SVG for the hamburger icon */
+  background: url(../images/hamburger-icon.svg) no-repeat 50% 50% / contain;
+}
+
+.hidden {
+  /* Utility class for hiding elements */
+  display: none;
+}
+
+[aria-expanded="true"] + #navigation {
+  /* Styling for expanded navigation menu */
+  display: block;
+}
+
+/* Navigation Styles */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav li {
+  margin: 0.5em 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+nav a.active {
+  /* Styling for the active navigation link */
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.header-navigation {
+  flex: 1;
+}
+
+.header-contact {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 500;
+  letter-spacing: 2.16px;
+  text-transform: uppercase;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.header-contact a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.phone-link {
+  /* Hiding the phone link initially */
+  display: none;
+}
+
+/* Main Content Styles */
+main {
+  /* Additional main content styles if needed */
+}
+
+.full-width {
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+}
+
+/* Hero Section Styles */
+.hero {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.hero picture {
+  height: 526px;
+}
+
+picture {
+  overflow: hidden;
+}
+
+picture img {
+  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+}
+
+/* Content Section Styles */
+.content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.content h1 {
+  color: var(--primary-color);
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.buttons * {
+  flex: 1;
+}
+
+/* Button Styles */
+.button {
+  display: inline-block;
+  padding: 16px 24px;
+  border: none;
+  font-size: 20px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 120px;
+  transition: 0.3s ease;
+  transition-property:  background-color, color;
+}
+
+.button.reverse-color {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+.button.white-color {
+  background-color: white;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--primary-color);
+}
+
+.button:hover,
+.button:focus {
+  background-color: #6b49a8;
+}
+
+.button:active {
+  background-color: #5a3780;
+  transition: background-color 0.1s ease;
+}
+
+/* Our Cakes Section Styles */
+.our-cakes {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.cakes-header {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 28px;
+  justify-content: space-between;
+}
+
+.our-cakes h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+}
+
+.see-all-link {
+  text-decoration: none;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+
+.see-all-link:hover,
+.see-all-link:focus {
+  color: var(--primary-color);
+}
+
+.see-all-link:active {
+  color: var(--primary-color);
+  transition: color 0.1s ease;
+}
+
+.cake-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 16px;
+}
+
+.cake-item a {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.cake-info {
+  display: flex;
+  font-size: 16px;
+  line-height: 20px;
+  gap: 4px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cake-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  flex-grow: 1;
+  transition: color .3s ease;
+}
+
+.cake-price {
+  margin: 0;
+}
+
+/* General footer styling: uses flexbox for layout, sets font size and line height, and ensures items are spaced evenly */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 0;
+  font-size: 18px;
+  line-height: 28px;
+  justify-content: space-between;
+}
+
+/* Styling for each column in the footer: sets the basis for flex items */
+.footer-column {
+  flex-basis: 50%;
+}
+
+/* Styling for links in footer columns: removes text decoration, sets color, and adds a transition for color change */
+.footer-column a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+/* Adds a hover and focus effect for links in the footer columns */
+.footer-column a:hover,
+.footer-column a:focus {
+  color: var(--primary-color);
+}
+
+/* Styling for headings in the footer: sets font weight, margin, font size, and line height */
+.footer-heading {
+  font-weight: 700;
+  margin: 0 0 8px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+/* Styling for unordered lists in the footer: removes list style, padding, and margin */
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling for buttons in the footer: sets width and max-width */
+.footer .button {
+  width: 100%;
+  max-width: 392px;
+}
+
+/* Specific styling for the footer credits section: sets height, flex basis, and other flex properties */
+.footer-credits {
+  height: 433px;
+  flex-basis: 100%;
+  margin-top: 28px;
+  position: relative;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  color: white;
+  padding-bottom: 34px;
+}
+
+/* Styling for pictures in the footer credits: sets height and position */
+.footer-credits picture {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+/* Removes margin from paragraphs in the footer credits */
+.footer-credits p {
+  margin: 0;
+}
+
+/* Styling for phone numbers in the footer: sets font size, text decoration, and color */
+.footer-phone {
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Adds a hover and focus effect for phone numbers in the footer */
+.footer-phone:hover,
+.footer-phone:focus {
+  color: var(--primary-color);
+}
+
+/* Margin top styling for the copyright section in the footer */
+.footer-credits .copyright {
+  margin-top: 48px;
+}
+
+/* General card styling for detail page: sets display to flex and direction to column, and defines gaps */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Styling for pictures in cards: sets margin and width */
+.card picture {
+  margin: 0 -24px;
+  width: calc(100% + 48px);
+}
+
+/* Styling for headers and titles in cards: sets font size, line height, weight, margin, color, and order */
+.card h1,
+.card .card-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bold;
+  margin: 0;
+  color: var(--primary-color);
+  order: 1;
+}
+
+/* Styling for H2 headers in cards: sets font size, line height, weight, margin, and color */
+.card h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+  margin: 0 0 16px;
+  color: #000;
+}
+
+/* Styling for the main text in cards: sets margin, order, and color */
+.card-text {
+  margin: 48px 0 72px;
+  order: 3;
+  color: rgba(0, 0, 0, .5);
+}
+
+/* Styling for paragraphs in the card text: sets margin */
+.card-text p {
+  margin: 0 0 16px;
+}
+
+/* Styling for horizontal rules in the card text: sets margin and border color */
+.card-text hr {
+  margin: 0 0 24px;
+  border-color: rgba(0, 0, 0, .12);
+  border-width: 0 0 1px;
+}
+
+/* Styling for card content: uses flexbox for layout and sets gaps */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Styling for buttons in card content: sets width and order */
+.card-content .button {
+  width: 100%;
+  order: 2;
+}
+
+/* Styling for the hero heading: sets position, padding, text alignment, font size, line height, color, margin, transform, and z-index */
+#hero-heading {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  padding: 0 24px;
+  text-align: center;
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--primary-color);
+  margin: 0;
+  transform: translateY(100%);
+  z-index: 3;
+}
+
+/* Media query for screens with a max width of 767px: styles for the cake list and items */
+@media screen  and (max-width: 767px) {
+  .cake-list.scroll {
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 -24px -12px;
+    padding: 0 24px 12px;
+    grid-template-columns: repeat(auto-fill, minmax(163px, 1fr));
+  }
+
+  .cake-list.scroll .cake-item {
+    flex-shrink: 0;
+    flex-basis: calc((100% - 16px) / 2);
+  }
+}
+
+/* Media query for screens with a min width of 768px: styles for various elements like cakes, headers, footers, and more */
+@media screen and (min-width: 768px) {
+  /* Styles for 'our cakes' section */
+  .our-cakes {
+    margin-bottom: 96px;
+  }
+  .our-cakes h2 {
+    font-size: 48px;
+    line-height: 62px;
+  }
+  .cakes-header {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .cake-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .cake-info,
+  .cake-title {
+    font-size: 24px;
+    line-height: normal;
+  }
+  /* Adjusted styles for footer heading and columns on larger screens */
+  .footer-heading {
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--primary-color);
+  }
+  .footer-column {
+    flex-basis: fit-content;
+  }
+  /* Adjusted styles for footer on larger screens */
+  .footer {
+    justify-content: space-around;
+    gap: 96px;
+  }
+  /* Adjusted styles for footer credits on larger screens */
+  .footer-credits {
+    margin-top: 0;
+    height: 422px;
+    padding-bottom: 30px;
+  }
+  .footer-credits img {
+    height: 100%;
+    width: 100%;
+  }
+  .footer-credits .copyright {
+    margin-top: 40px;
+  }
+  /* Styles for content, buttons, hero section, navigation, and more on larger screens */
+  .content {
+    grid-template-columns: minmax(auto, 662px) 1fr;
+    align-items: center;
+    gap: 110px;
+    margin-bottom: 96px;
+  }
+  .content h1 {
+    font-size: 38px;
+    line-height: 44px;
+  }
+  .button {
+    font-size: 24px;
+    line-height: 24px;
+    min-width: 217px;
+  }
+  .buttons {
+    gap: 32px;
+  }
+  .hero {
+    margin-bottom: 96px;
+  }
+  .hero picture {
+    height: 700px;
+  }
+  .hero picture img {
+    height: 100%;
+    width: 100%;
+  }
+  /* Styles for menu button, navigation, and header on larger screens */
+  #menu-button {
+    display: none;
+  }
+  #navigation {
+    display: block;
+  }
+  nav ul {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 16px;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+  nav li {
+    margin: 0;
+  }
+  nav a {
+    color: var(--primary-color);
+    padding: 8px 16px;
+  }
+  .header {
+    padding-top: 55px;
+  }
+  .header.absolute {
+    left: 64px;
+    right: 64px;
+  }
+  /* Styles for logo on larger screens */
+  .logo {
+    display: block;
+    width: 132px;
+    height: 164px;
+    margin-top: -37px;
+  }
+  /* Styles for the logo link, making it fill its container entirely. */
+  .logo a {
+    display: block;
+    height: 100%;
+  }
+  /* Ensures the logo image scales properly to fill its container while maintaining its aspect ratio. */
+  .logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  /* Adds horizontal padding to the wrapper element. */
+  #wrapper {
+    padding: 0 64px;
+  }
+
+  /* Styles for a link that appears as an inline-flex element, typically for phone numbers. */
+  .phone-link {
+    display: inline-flex;
+    padding: 8px 16px;
+  }
+
+  /* Sets a gap between elements within the header contact section. */
+  .header-contact {
+    gap: 16px;
+  }
+
+  /* Defines a grid layout for card components, with a specific column setup and spacing. */
+  .card {
+    display: grid;
+    grid-template-columns: minmax(auto, 713px) 1fr;
+    gap: 0 128px;
+    margin-bottom: 96px;
+  }
+
+  /* Hides the card title by default. */
+  .card-title {
+    display: none;
+  }
+
+  /* Styles for the card title when it's not hidden, including font size, line height, and grid placement. */
+  .card-title.hidden {
+    display: block;
+    font-size: 48px;
+    line-height: 62px;
+    margin-bottom: 52px;
+    grid-row: 1;
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  /* Changes the order of the button element within card content, moving it to the third position. */
+  .card-content .button {
+    order: 3;
+  }
+
+  /* Sets margins for text within a card. */
+  .card-text {
+    margin: 0 0 25px;
+  }
+
+  /* Styles for the main heading in the hero section, including font size, line height, and padding. */
+  #hero-heading {
+    font-size: 64px;
+    line-height: 68px;
+    padding: 0 64px;
+  }
+}
+
+/* Media query for hover interactions, applying to devices that support hover. */
+@media (hover: hover) {
+
+  /* Applies a color transition effect to all anchor tags on hover. */
+  a {
+      transition: color .3s ease;
+  }
+
+  /* Changes the text color to white on hover for buttons with the 'white-color' class. */
+  .button.white-color:hover {
+      color: #fff;
+  }
+
+  /* On hover, reverses the color scheme for buttons with the 'reverse-color' class. */
+  .button.reverse-color:hover {
+      color: var(--secondary-color);
+      background-color: var(--primary-color);
+  }
+
+  /* Generic hover effect for buttons, changing background and text colors. */
+  .button:hover {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+  }
+
+  /* Transition effect for the color of the footer phone link on hover. */
+  .footer-phone {
+      transition: color 0.3s ease;
+  }
+
+  /* Changes the cake title color on hover in the cake item component. */
+  .cake-item:hover .cake-title {
+      color: var(--primary-color);
+  }
+
+  /* Changes the color of header links on hover. */
+  .header a:hover {
+      color: var(--secondary-color);
+  }
+}
